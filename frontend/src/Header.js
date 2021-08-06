@@ -23,7 +23,7 @@ export const Header = () => {
       {
         <Title>
           {<img src={lula} style={{ height: "5em" }} />}
-          {<Word>👀 Eyes on the Road 🛣</Word>}
+          {<Word>Eyes on the Road</Word>}
           {<Button>Made with ❤️ at Miami Hack Week</Button>}
         </Title>
       }

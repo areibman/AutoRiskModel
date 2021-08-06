@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { Card } from "./Card";
-import lula from "./lulalogo.png";
-import { Button } from "./Button";
 import model from "./model.png";
-import vid from "./vid.mp4";
 import RotateRightIcon from "@material-ui/icons/RotateRight";
 import RotateLeftIcon from "@material-ui/icons/RotateLeft";
 import WarningIcon from "@material-ui/icons/Warning";

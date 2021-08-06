@@ -14,12 +14,7 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
-export const Score = ({ roadQuality, left, right }) => {
-  const base = 7.32;
-  const rqBeta = 0.5;
-  const leftBeta = -5;
-  const rightBeta = -3.1;
-
+export const Score = ({ roadQuality, left, right, score }) => {
   return (
     <Container>
       <Card>
@@ -27,17 +22,15 @@ export const Score = ({ roadQuality, left, right }) => {
           tex={
             String.raw`\hat{y} = \beta_{\text{base risk}} + \beta_{\text{road quality}}(` +
             roadQuality +
-            String.raw`) - \beta_{\text{hard left}}(` +
+            String.raw`) + \beta_{\text{hard left}}(` +
             left +
-            String.raw`)- \beta_{\text{hard right}}(` +
+            String.raw`) + \beta_{\text{hard right}}(` +
             right +
             `)`
           }
         />
-        <Total>
-          Risk Score:
-          {base + rqBeta * roadQuality + leftBeta * left + rightBeta * right}
-        </Total>
+        <Total>Risk Score:</Total>
+        <Total>{score}</Total>
       </Card>
     </Container>
   );
